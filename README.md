@@ -10,12 +10,29 @@
 - Insert the SDCARD into the board
 - **ON ZC702 keep SW16 boot config switch position: 00110**
 - You can login to the board accessing the serial port
-- [ ] Solve the jupyter access issue.
+
+### Issues:
+
+- [x] Solve the jupyter access issue.
+    - There are two ways for network connection: 
+        1) Connect board to common router
+        2) Connect board ethernet port directly to PC
+    - More Info [Here](https://pynq.readthedocs.io/en/v2.0/getting_started.html#connect-to-a-network-router)
+    - I'm using the first option:
+        1) First check whether the network port running on board using `ping 8.8.8.8`
+        2) Then run `ifconfig` and find out the address of eth0 inet.
+        3) On host computer `http://<etho0-address>:9090`
+        4) Ensure port 9090 is not blocked by your router/isp.
+        5) Login with password `xilinx`
 - [ ] PYNQ-DPU port on zc702
+    - Xilinx has a DPU library, it is directly supported to pynq boards via [pynq-dpu](https://github.com/Xilinx/DPU-PYNQ) repo and vitis AI.
+    - We will need to port it for ZC702.
+    - Reference TRD: [Zynq-7000-DPU-TRD](https://github.com/sumilao/Zynq-7000-DPU-TRD)
+- [ ] Figure out the way to include FPGA bit file on the board
 
 ### Build the image with customized conf file:
 
-- create a `test_repo/ZC702` folder inside `<petalinux>/sdbuild`
+- create a `test_repo/ZC702` folder inside `<pynq>/sdbuild`
 - The `test_repo/ZC702` should contain the ZC702 BSP file which can be downloaded from the xilinx site.
 - source the following things if not done already: 
 ```
