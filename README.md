@@ -5,14 +5,13 @@
 
 - Get the Image file from [Here](https://drive.google.com/file/d/1yqIqKBsLTee0bAPET0PcrAWoWAk6VIH9/view?usp=sharing)
 - Untar `ZC702-2.6.0.tar.xz`
-- flash the image to sd card using [balena etcher](https://www.balena.io/etcher/) or dd 
-<br>
+- flash the image to sd card using [balena etcher](https://www.balena.io/etcher/) or dd <br>
 `sudo dd bs=1M if=<image-name>.img of=/dev/<sdcard>`
 - Insert the SDCARD into the board
 - **ON ZC702 keep SW16 boot config switch position: 00110**
 - You can login to the board accessing the serial port
-- [x] Solve the jupyter access issue.
-- [x] PYNQ-DPU port on zc702
+- [ ] Solve the jupyter access issue.
+- [ ] PYNQ-DPU port on zc702
 
 ### Build the image with customized conf file:
 
