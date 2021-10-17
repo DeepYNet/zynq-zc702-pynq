@@ -3,7 +3,7 @@
 
 ### Directly use the image for running pynq on zc702:
 
-- Get the Image file from [Here](https://drive.google.com/file/d/1yqIqKBsLTee0bAPET0PcrAWoWAk6VIH9/view?usp=sharing)
+- Get the Image file from [Here](https://github.com/DeepYNet/zynq-zc702-pynq/releases/download/v1.0/ZC702-2.6.0.tar.xz)
 - Untar `ZC702-2.6.0.tar.xz`
 - flash the image to sd card using [balena etcher](https://www.balena.io/etcher/) or dd <br>
 `sudo dd bs=1M if=<image-name>.img of=/dev/<sdcard>`
