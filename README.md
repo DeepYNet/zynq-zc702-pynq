@@ -9,6 +9,7 @@
 `sudo dd bs=1M if=<image-name>.img of=/dev/<sdcard>`
 - Insert the SDCARD into the board
 - **ON ZC702 keep SW16 boot config switch position: 00110**
+![IMG_20211017_153717](https://user-images.githubusercontent.com/22630228/137789953-7ee7ba92-b827-488b-85a0-b87965537d3e.jpg)
 - You can login to the board accessing the serial port
 
 ### Issues:
